@@ -1,0 +1,82 @@
+//criação do projeto sem o cli do react-native (npm uninstall -g react-native-cli )
+npx react-native init appgobarber --template react-native-template-typescript
+
+//adicionar o eslint -padronização do código
+yarn add eslint -D
+
+//inicializar o eslint
+yarn eslint --init
+
+//Após inicializar ele retornará as importações que precisam ser realizadas
+yarn add eslint-plugin-react@^7.19.0 @typescript-eslint/eslint-plugin@latest eslint-config-airbnb@latest eslint-plugin-import@^2.20.1 eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react-hooks@^2.5.0 @typescript-eslint/parser@latest -D
+
+//Configurar o prettier
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+//Corrigir as importações nos arquivos typescript
+yarn add eslint-import-resolver-typescript
+
+//uma das melhores bibliotecas de estilo
+yarn add styled-components
+
+//Adicionar os tipos da biblioteca (dependências de desenvolvimento)
+yarn add @types/styled-components
+
+//adicionar o pacote de rotas (react navigation no site)
+yarn add @react-navigation/native
+
+//adicionar mais estes pacotes da rota
+yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+//para atualizar as modificações nos arquivos raizes do android/iphone
+yarn android
+
+//para finalizar o pacote de rotas
+yarn add @react-navigation/stack
+
+//depois de criado o arquivo 'react-native.config.js' rodar o comando para buscar as fontes importadas
+yarn react-native link
+
+//pacote de ícones para react-native
+yarn add react-native-vector-icons
+
+// para ios
+por install
+
+// na pasta ios->appgobarber no arquivo Info.plist
+// adicionar as fontes dos ícones
+ <string>Feather.ttf</string>
+ //no final, junto com as outras fontes do aplicativo
+
+ //para android
+ //entrar na pasta android -> app no arquivo build.gradle
+ // no final do arquivo adicionar:
+
+project.ext.vectoricons = [
+  iconFontNames: ['Feather.ttf']
+]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+//adicionar a tipagem do pacote
+yarn add @types/react-native-vector-icons
+
+//lib
+yarn add react-native-iphone-x-helper
+
+//biblioteca de gerenciamento de formulario da rocketseat
+yarn add @unform/core @unform/mobile
+
+//biblioteca de validação das informações do formulario
+ yarn add yup
+
+ //pacote de tipagens do yup
+ yarn add @types/yup
+
+ //biblioteca utilizada para consumir api's
+ yarn add axios
+
+ //pacote de storage local para mobile
+ yarn add @react-native-community/async-storage
+
+
+
